@@ -38,10 +38,13 @@ public class Message {
 
     // Recipient: “no more than ten characters and contains international code”
     // We’ll require a '+' then 1–10 digits (reuse Part 1 phone concept).
-    public static boolean checkRecipientCell(String cell) {
-        if (cell == null) return false;
-        return Pattern.compile("^\\+\\d{1,10}$").matcher(cell).matches();
-    }
+    public static boolean checkRecipientCell(String recipient) {
+    if (recipient == null) return false;
+
+    // Accepts numbers that start with + followed by 8–13 digits
+    // e.g. +27718693002
+    return recipient.matches("^\\+\\d{8,13}$");
+}
 
     // 250-char limit (brief’s Part 2 tests use 250, but see note below)
     public static String checkMessageLengthFeedback(String msg) {

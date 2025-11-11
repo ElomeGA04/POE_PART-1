@@ -100,7 +100,7 @@ public class QuickChatApp {
                     break;
 
                 case "2":
-                    JOptionPane.showMessageDialog(null, "Coming Soon."); // as required
+                    JOptionPane.showMessageDialog(null, "Part 3 features."); // as required
                     break;
 
                 case "3":
